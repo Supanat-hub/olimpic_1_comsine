@@ -16,7 +16,7 @@ def func_chipi(i):
     #     index = i % len(base_words)
     #     return f"{func_chipi(i-1)}{base_words[index]*i}{func_chipi(i-1)}"
     else:
-        index = i % len(base_words)
+        index = i % 4
         return f"{func_chipi(i-1)}{base_words[index]*i}{func_chipi(i-1)}"  # F(i) = F(i-1) + base_words[i]*i + F(i-1)
 
 s = func_chipi(n)
