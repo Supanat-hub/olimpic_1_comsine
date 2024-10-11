@@ -12,12 +12,8 @@ def create_message(num):
 def func_chipi(i):
     if i == 0:
         return base_words[0]
-    # elif i >= len(base_words):
-    #     index = i % len(base_words)
-    #     return f"{func_chipi(i-1)}{base_words[index]*i}{func_chipi(i-1)}"
     else:
-        index = i % 4
-        return f"{func_chipi(i-1)}{base_words[index]*i}{func_chipi(i-1)}"  # F(i) = F(i-1) + base_words[i]*i + F(i-1)
+        return f"{func_chipi(i-1)}{base_words[i % 4]*i}{func_chipi(i-1)}"  # F(i) = F(i-1) + base_words[i]*i + F(i-1)
 
 s = func_chipi(n)
 # print("s = ",s)
@@ -29,4 +25,3 @@ def find_char(position):
 
 for pos in positions:
     print(find_char(pos))
-
