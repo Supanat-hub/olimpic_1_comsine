@@ -19,7 +19,7 @@ def func_chipi(i):
         return f"{func_chipi(i-1)}{base_words[i]*i}{func_chipi(i-1)}"  # F(i) = F(i-1) + base_words[i]*i + F(i-1)
 
 s = func_chipi(n)
-print("s = ",s)
+# print("s = ",s)
 def find_char(position):
     if position <= len(s):
         return s[position - 1]
