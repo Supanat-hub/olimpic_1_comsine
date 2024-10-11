@@ -6,7 +6,7 @@ base_words = ["chipi", "chapa", "dubi", "daba"]
 def create_message(num):
     message = ""
     for i in range(num):
-        message += base_words[i % len(base_words)]
+        message += base_words[i % 4]
     return message
 
 def func_chipi(i):
